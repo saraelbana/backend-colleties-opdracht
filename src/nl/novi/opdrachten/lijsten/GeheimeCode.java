@@ -1,19 +1,23 @@
 package nl.novi.opdrachten.lijsten;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class GeheimeCode {
 
-    public static void main(String[] secret) {
+    public static void main(String[] secret){
 
-        List<String> laResistanceMembers = new ArrayList<>();
+        Set<String> laResistanceMembers = new HashSet<>();
 
         laResistanceMembers = addMembers(laResistanceMembers, "Arie");
         laResistanceMembers = addMembers(laResistanceMembers, "Sjaak");
         laResistanceMembers = addMembers(laResistanceMembers, "Henrie");
         laResistanceMembers = addMembers(laResistanceMembers, "Piet");
         laResistanceMembers = addMembers(laResistanceMembers, "LeDroitCestMoi");
+        laResistanceMembers = addMembers(laResistanceMembers, "Arie");
+        laResistanceMembers = addMembers(laResistanceMembers, "Sjaak");
 
         /*
         Opdracht 1: Hierboven zijn via de methode addMembers, leden aan de lijst toegevoegd. Pas de Methode zo aan dat
@@ -36,8 +40,13 @@ public class GeheimeCode {
          */
     }
 
-    private static List<String> addMembers(List<String> members, String name) {
-        members.add(name);
+    private static Set<String> addMembers(Set<String> members, String name) {
+        if(members.add(name))
+        {
+            System.out.println("Added successfully");
+        }
+        else
+            System.out.println("Adding failed");
         return members;
     }
 }

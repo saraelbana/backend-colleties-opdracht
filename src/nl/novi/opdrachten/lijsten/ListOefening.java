@@ -25,6 +25,7 @@ public class ListOefening {
         // 1 - PSv
         // etc...
 
+
         // Vraag 1: Maak een methode die checkt of een club al in de lijst zit en voeg deze anders toe.
 
         // Vraag 2: Maak een methode die de positie van de club in de lijst teruggeeft.
